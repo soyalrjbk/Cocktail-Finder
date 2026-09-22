@@ -9,6 +9,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
 .then(res =>res.json())
 .then(data=>{
     // Loop through each drink to get its name, photo, and instructions
+    //I still gotta work on making this a menu that loops in the list of arrays and provides the list by inputed value
     data.drinks.forEach(drink=>{ 
     console.log(data.drinks)
     document.querySelector('h2').textContent=drink.strDrink
